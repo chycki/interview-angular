@@ -20,5 +20,6 @@ export class AppComponent  {
 
   public onAddBook() {
     this.book.count += 1;
+    this.book = {...this.book}
   }
 }

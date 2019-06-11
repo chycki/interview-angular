@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Book } from "./app.component";
 
 // changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,7 +12,8 @@ import { Book } from "./app.component";
     </li>
   </ul>
   `,
-  styles: ["span {font-weight: bold; color: red; font-size: 18px}"]
+  styles: ["span {font-weight: bold; color: red; font-size: 18px}"],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookItemComponent  {
   @Input() book: Book;
